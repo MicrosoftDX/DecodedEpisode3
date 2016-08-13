@@ -33,7 +33,7 @@ server.post('/v1/messages', verifyBotFramework(credentials), (req, res) => {
 })
 
 // Start server
-server.listen(process.env.PORT || 5000, function () {
+server.listen(5000, function () {
   console.log('%s listening to %s', server.name, server.url)
 })
 
