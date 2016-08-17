@@ -31,9 +31,12 @@ server.post('/v1/messages', verifyBotFramework(credentials), (req, res) => {
     return memes.returnMeme(req, res)
   }
 })
-
+server.get('/', restify.serveStatic({
+    'directory': __dirname,
+    'default': 'index.html'
+}));
 // Start server
-server.listen(5000, function () {
+server.listen(process.env.PORT || 5000, function () {
   console.log('%s listening to %s', server.name, server.url)
 })
 
