@@ -4,5 +4,5 @@ FROM node:latest
 WORKDIR /src
 ADD . .
 
-EXPOSE 5000
+EXPOSE 80
 CMD ["node", "app.js"]
